@@ -495,30 +495,10 @@ public class ChineseChess {
     } //BoardState
 
     /**
-     * 请求类型
-     */
-    public enum RequestType {
-        /**
-         * 悔棋, 新局
-         */
-        RETRACT, RESET
-    } // RequestType
-
-    /**
-     * 回应类型
-     */
-    public enum ResponseType {
-        /**
-         * 同意, 拒绝
-         */
-        AGREE, REFUSE
-    } // ResponseType
-
-    /**
      * 步
      */
-    public static class Step implements Serializable {
-        private static final long serialVersionUID = 2149760773355565839L;
+    public static class Step extends game.logic.Step implements Serializable {
+        private static final long serialVersionUID = 3245530199905468782L;
         /**
          * from 起始位置
          * to   目的位置
@@ -533,25 +513,17 @@ public class ChineseChess {
          * stepName 棋谱步名
          */
         public String stepName;
-        /**
-         * 请求类型
-         */
-        public RequestType requestType;
-        /**
-         * 回应类型
-         */
-        public ResponseType responseType;
 
         public Step() {
         }
 
         public Step(Step s) {
+            super(s);
             from = new Point(s.from);
             to = new Point(s.to);
             after = s.after;
             before = s.before;
             stepName = s.stepName;
-            requestType = s.requestType;
         }
     }
 } // ChineseChess

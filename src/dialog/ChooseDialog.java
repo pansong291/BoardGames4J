@@ -1,7 +1,7 @@
 package dialog;
 
 import dialog.listener.CardButtonListener;
-import windows.ChineseChessFrame;
+import windows.BaseBoardGameFrame;
 import windows.adapter.WinClose;
 
 import java.awt.*;
@@ -11,39 +11,39 @@ import java.awt.*;
  * @date 2020/11/14
  */
 public class ChooseDialog {
-    ChineseChessFrame mainFrame;
+    BaseBoardGameFrame mainFrame;
 
-        Dialog dialog;
+    Dialog dialog;
 
-        Panel panelCard;
-        Button btnCardServer;
-        Button btnCardClient;
+    Panel panelCard;
+    Button btnCardServer;
+    Button btnCardClient;
 
-        Panel panelCenter;
+    Panel panelCenter;
 
-        Panel panelServer;
-        Panel row11;
-        Panel row12;
-        Label labelName1;
-        Label labelPort1;
-        TextField textFieldName1;
-        TextField textFieldPort1;
+    Panel panelServer;
+    Panel row11;
+    Panel row12;
+    Label labelName1;
+    Label labelPort1;
+    TextField textFieldName1;
+    TextField textFieldPort1;
 
-        Panel panelClient;
-        Panel row21;
-        Panel row22;
-        Panel row23;
-        Label labelName2;
-        Label labelHost2;
-        Label labelPort2;
-        TextField textFieldName2;
-        TextField textFieldHost2;
-        TextField textFieldPort2;
+    Panel panelClient;
+    Panel row21;
+    Panel row22;
+    Panel row23;
+    Label labelName2;
+    Label labelHost2;
+    Label labelPort2;
+    TextField textFieldName2;
+    TextField textFieldHost2;
+    TextField textFieldPort2;
 
-        Button btnOk;
+    Button btnOk;
 
-    public ChooseDialog(ChineseChessFrame mainFrame, Frame frame) {
-        this.mainFrame = mainFrame;
+    public ChooseDialog(BaseBoardGameFrame mFrame, Frame frame) {
+        this.mainFrame = mFrame;
         dialog = new Dialog(frame, true);
         dialog.setLayout(new BorderLayout());
         dialog.setSize(300, 300);
@@ -146,7 +146,7 @@ public class ChooseDialog {
         dialog.setVisible(true);
     }
 
-        public boolean checkTextNonEmpty(TextField textField) {
+    public boolean checkTextNonEmpty(TextField textField) {
         String text = textField.getText();
         return text != null && !text.isEmpty();
     } // checkTextNonEmpty

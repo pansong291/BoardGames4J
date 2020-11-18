@@ -7,32 +7,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8317a10-9dd9-40be-9dbf-bfdfa8238187" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dialog/ChooseDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dialog/DialogClose.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dialog/MessageDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dialog/listener/CardButtonListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/logic/ChineseChess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tcp/MessagePool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tcp/client/DiyClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tcp/server/DiyServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tcp/thread/ReceiveThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tcp/thread/SendThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/windows/ChineseChessFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/windows/adapter/WinClose.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/windows/listener/ChineseChessButtonListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/windows/panel/ChineseChessPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/logic/Gobang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/logic/RequestType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/logic/ResponseType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/logic/Step.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/windows/BaseBoardGameFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/windows/GobangFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/windows/panel/GobangPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dialog/ChooseDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dialog/ChooseDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/logic/ChineseChess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/logic/ChineseChess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tcp/client/DiyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tcp/client/DiyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tcp/server/DiyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tcp/server/DiyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tcp/thread/ReceiveThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tcp/thread/ReceiveThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/windows/ChineseChessFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/windows/ChineseChessFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/windows/listener/ChineseChessButtonListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/windows/listener/BoardGameButtonListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/windows/panel/ChineseChessPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/windows/panel/ChineseChessPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kJplGrWzFV4kd3CnwBXly8GhMw" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -42,6 +55,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last.edited.regexp" value="" />
@@ -81,12 +95,39 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605428697643</updated>
-      <workItem from="1605428700168" duration="703000" />
+      <workItem from="1605428700168" duration="1571000" />
+      <workItem from="1605616276613" duration="9755000" />
+      <workItem from="1605662220359" duration="5611000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1605429643525</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605429643526</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="476" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605428976812">
@@ -97,6 +138,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="802" y="228" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605428898815" />
+    <state x="754" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1605666368734">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="754" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605666368734" />
     <state x="752" y="307" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1605429056913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -105,29 +150,45 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="956" y="438" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605428739649" />
-    <state x="622" y="116" key="CommitChangelistDialog2" timestamp="1605429496955">
+    <state x="622" y="116" key="CommitChangelistDialog2" timestamp="1605429640605">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="622" y="116" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605429496955" />
-    <state width="1425" height="279" key="GridCell.Tab.0.bottom" timestamp="1605428982643">
+    <state x="622" y="116" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605429640605" />
+    <state width="1331" height="279" key="GridCell.Tab.0.bottom" timestamp="1605667271385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1425" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605428982643" />
-    <state width="1425" height="279" key="GridCell.Tab.0.center" timestamp="1605428982642">
+    <state width="1331" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605667271385" />
+    <state width="1331" height="279" key="GridCell.Tab.0.center" timestamp="1605667271385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1425" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605428982642" />
-    <state width="1425" height="279" key="GridCell.Tab.0.left" timestamp="1605428982642">
+    <state width="1331" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605667271385" />
+    <state width="1331" height="279" key="GridCell.Tab.0.left" timestamp="1605667271385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1425" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605428982642" />
-    <state width="1425" height="279" key="GridCell.Tab.0.right" timestamp="1605428982642">
+    <state width="1331" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605667271385" />
+    <state width="1331" height="279" key="GridCell.Tab.0.right" timestamp="1605667271385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1425" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605428982642" />
+    <state width="1331" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605667271385" />
     <state x="502" y="98" key="SettingsEditor" timestamp="1605429407103">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="502" y="98" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605429407103" />
+    <state x="670" y="266" width="564" height="524" key="StructurePopup" timestamp="1605666364915">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="670" y="266" width="564" height="524" key="StructurePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1605666364915" />
+    <state x="614" y="256" key="Vcs.Push.Dialog.v2" timestamp="1605429697898">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="614" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605429697898" />
+    <state width="506" height="356" key="documentation.popup.size" timestamp="1605618826577">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="506" height="356" key="documentation.popup.size/0.0.1920.1040@0.0.1920.1040" timestamp="1605618826577" />
+    <state x="612" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1605666616047">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="612" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605666616047" />
   </component>
 </project>
