@@ -1,7 +1,8 @@
 package windows.listener;
 
-import game.logic.ChineseChess;
-import windows.ChineseChessFrame;
+import game.logic.RequestType;
+import game.logic.Step;
+import windows.BaseBoardGameFrame;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,10 +11,10 @@ import java.awt.event.ActionListener;
  * @author paso
  * @since 2020/11/14
  */
-public class ChineseChessButtonListener implements ActionListener {
-    ChineseChessFrame frame;
+public class BoardGameButtonListener implements ActionListener {
+    BaseBoardGameFrame frame;
 
-    public ChineseChessButtonListener(ChineseChessFrame frame) {
+    public BoardGameButtonListener(BaseBoardGameFrame frame) {
         this.frame = frame;
     }
 
@@ -22,17 +23,17 @@ public class ChineseChessButtonListener implements ActionListener {
         if (frame.isRequesting) {
             return;
         }
-        if (!frame.chessPanel.canRetract()) {
+        if (!frame.canRetract()) {
             return;
         }
         frame.isRequesting = true;
-        ChineseChess.Step step = new ChineseChess.Step();
+        Step step = new Step();
         if (e.getActionCommand().equals(frame.btnRetract.getActionCommand())) {
             frame.labelCurrent.setText("正在请求悔棋...");
-            step.requestType = ChineseChess.RequestType.RETRACT;
+            step.requestType = RequestType.RETRACT;
         } else if (e.getActionCommand().equals(frame.btnReset.getActionCommand())) {
             frame.labelCurrent.setText("正在发起新局...");
-            step.requestType = ChineseChess.RequestType.RESET;
+            step.requestType = RequestType.RESET;
         }
         frame.messagePool.putMessage(step);
         frame.btnRetract.setEnabled(false);

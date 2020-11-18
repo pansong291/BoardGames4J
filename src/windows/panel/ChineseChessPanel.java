@@ -6,15 +6,16 @@ import game.logic.ChineseChess.Step;
 import windows.ChineseChessFrame;
 
 import java.awt.*;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.util.Stack;
 
 /**
  * @author paso
  * @since 2020/11/14
  */
-public class ChineseChessPanel extends Component implements MouseListener {
+public class ChineseChessPanel extends Component implements MouseListener, ComponentListener {
     /**
      * 中国象棋游戏逻辑
      */
@@ -118,6 +119,7 @@ public class ChineseChessPanel extends Component implements MouseListener {
         chineseChess = new ChineseChess();
         defInit();
         addMouseListener(this);
+        addComponentListener(this);
     }
 
     /**
@@ -608,6 +610,26 @@ public class ChineseChessPanel extends Component implements MouseListener {
     public void mouseExited(MouseEvent e) {
     }
 
+    @Override
+    public void componentResized(ComponentEvent e) {
+        calculated = false;
+    }
+
+    @Override
+    public void componentMoved(ComponentEvent e) {
+    }
+
+    @Override
+    public void componentShown(ComponentEvent e) {
+    }
+
+    @Override
+    public void componentHidden(ComponentEvent e) {
+    }
+
+    /**
+     * 点击监听
+     */
     public interface OnClickListener {
         void onClick(Step msg);
     } // OnClickListener

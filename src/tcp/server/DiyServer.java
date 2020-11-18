@@ -2,7 +2,7 @@ package tcp.server;
 
 import tcp.thread.ReceiveThread;
 import tcp.thread.SendThread;
-import windows.ChineseChessFrame;
+import windows.BaseBoardGameFrame;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -16,9 +16,9 @@ import java.net.Socket;
 public class DiyServer {
     String name;
     ServerSocket serverSocket;
-    ChineseChessFrame frame;
+    BaseBoardGameFrame frame;
 
-    public DiyServer(String name, int port, ChineseChessFrame frame) {
+    public DiyServer(String name, int port, BaseBoardGameFrame frame) {
         try {
             this.name = name;
             this.frame = frame;

@@ -1,7 +1,7 @@
 package tcp.thread;
 
-import game.logic.ChineseChess;
-import windows.ChineseChessFrame;
+import game.logic.Step;
+import windows.BaseBoardGameFrame;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -15,9 +15,9 @@ import java.util.concurrent.TimeUnit;
  */
 public class ReceiveThread extends Thread {
     Socket socket;
-    ChineseChessFrame frame;
+    BaseBoardGameFrame frame;
 
-    public ReceiveThread(Socket socket, ChineseChessFrame frame) {
+    public ReceiveThread(Socket socket, BaseBoardGameFrame frame) {
         this.socket = socket;
         this.frame = frame;
     }
@@ -28,13 +28,13 @@ public class ReceiveThread extends Thread {
             ObjectInputStream input = new ObjectInputStream(socket.getInputStream());
             frame.labelConnect.setText(input.readUTF());
             while (true) {
-                ChineseChess.Step step = (ChineseChess.Step) input.readObject();
+                Step step = (Step) input.readObject();
                 if (step.responseType != null) {
                     frame.respond(step);
                 } else if (step.requestType != null) {
                     frame.request(step);
                 } else {
-                    frame.chessPanel.updateFrom(step, true);
+                    frame.updateFrom(step, true);
                 }
                 TimeUnit.MILLISECONDS.sleep(10);
             }
