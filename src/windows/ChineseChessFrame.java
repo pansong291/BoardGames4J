@@ -4,7 +4,6 @@ import dialog.ChooseDialog;
 import dialog.MessageDialog;
 import game.logic.ChineseChess;
 import game.logic.Step;
-import windows.listener.BoardGameButtonListener;
 import windows.panel.ChineseChessPanel;
 
 import java.awt.*;
