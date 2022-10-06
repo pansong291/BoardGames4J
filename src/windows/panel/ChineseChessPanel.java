@@ -15,7 +15,7 @@ import java.awt.event.MouseListener;
  * @author paso
  * @since 2020/11/14
  */
-public class ChineseChessPanel extends Component implements MouseListener, ComponentListener {
+public class ChineseChessPanel extends DoubleBufferingPanel implements MouseListener, ComponentListener {
     /**
      * 中国象棋游戏逻辑
      */
@@ -613,6 +613,7 @@ public class ChineseChessPanel extends Component implements MouseListener, Compo
     @Override
     public void componentResized(ComponentEvent e) {
         calculated = false;
+        clearCache();
     }
 
     @Override

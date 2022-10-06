@@ -15,7 +15,7 @@ import java.util.Stack;
  * @author paso
  * @since 2020/11/17
  */
-public class GobangPanel extends Component implements MouseListener, ComponentListener {
+public class GobangPanel extends DoubleBufferingPanel implements MouseListener, ComponentListener {
     /**
      * 五子棋游戏逻辑
      */
@@ -384,6 +384,7 @@ public class GobangPanel extends Component implements MouseListener, ComponentLi
     @Override
     public void componentResized(ComponentEvent e) {
         calculated = false;
+        clearCache();
     }
 
     @Override
