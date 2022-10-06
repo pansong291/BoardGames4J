@@ -469,67 +469,6 @@ public class ChineseChessPanel extends DoubleBufferingPanel implements MouseList
         return false;
     }
 
-    @Override
-    public void mouseClicked(MouseEvent event) {
-        // 发起请求时无法落子
-        if (frame.isRequesting) {
-            return;
-        }
-        // 已诞生赢家的情况下不能再落子
-        if (chineseChess.hasWinner) {
-            return;
-        }
-        int x = event.getX(), y = event.getY();
-        int tx, ty;
-        // 横坐标转为列数
-        ty = point2Row(x - board_left_x);
-        // 纵坐标转为行数
-        tx = point2Row(y - board_top_y);
-        // 出界判断
-        if (isOutside(tx, ty)) {
-            return;
-        }
-        // 多次点击同一个位置
-        if (select_point.x == tx && select_point.y == ty) {
-            return;
-        }
-        BoardState selBS = chineseChess.board_state[select_point.x][select_point.y];
-        Step msg = null;
-        // 之前选中的不为空
-        if (selBS != null) {
-            // 回合轮流限制
-            if (selBS.color() == chineseChess.current && player == chineseChess.current) {
-                // 到达位要么为空，要么为对方棋子
-                if (chineseChess.board_state[tx][ty] == null || chineseChess.board_state[tx][ty].color() != chineseChess.current) {
-                    // 到达位符合规则
-                    if (chineseChess.isCorrect(select_point, tx, ty)) {
-                        // 建立棋谱步骤
-                        Step stp = new Step();
-                        stp.from = new Point(select_point);
-                        stp.to = new Point(tx, ty);
-                        stp.before = chineseChess.board_state[tx][ty];
-                        stp.after = chineseChess.board_state[select_point.x][select_point.y];
-                        stp.stepName = chineseChess.getStepName(select_point, tx, ty);
-                        msg = new Step(stp);
-                        // 更新棋盘状态
-                        updateFrom(stp, false);
-                    }
-                }
-            }
-        }
-        // 设置选中位置
-        select_point.setLocation(tx, ty);
-        if (onClickListener != null) {
-            if (msg == null) {
-                msg = new Step();
-                msg.to = new Point(select_point);
-            }
-            onClickListener.onClick(msg);
-        }
-        // 重绘画布
-        repaint();
-    }
-
     /**
      * 更新步骤
      *
@@ -599,7 +538,68 @@ public class ChineseChessPanel extends DoubleBufferingPanel implements MouseList
     }
 
     @Override
-    public void mouseReleased(MouseEvent e) {
+    public void mouseReleased(MouseEvent event) {
+        // 发起请求时无法落子
+        if (frame.isRequesting) {
+            return;
+        }
+        // 已诞生赢家的情况下不能再落子
+        if (chineseChess.hasWinner) {
+            return;
+        }
+        int x = event.getX(), y = event.getY();
+        int tx, ty;
+        // 横坐标转为列数
+        ty = point2Row(x - board_left_x);
+        // 纵坐标转为行数
+        tx = point2Row(y - board_top_y);
+        // 出界判断
+        if (isOutside(tx, ty)) {
+            return;
+        }
+        // 多次点击同一个位置
+        if (select_point.x == tx && select_point.y == ty) {
+            return;
+        }
+        BoardState selBS = chineseChess.board_state[select_point.x][select_point.y];
+        Step msg = null;
+        // 之前选中的不为空
+        if (selBS != null) {
+            // 回合轮流限制
+            if (selBS.color() == chineseChess.current && player == chineseChess.current) {
+                // 到达位要么为空，要么为对方棋子
+                if (chineseChess.board_state[tx][ty] == null || chineseChess.board_state[tx][ty].color() != chineseChess.current) {
+                    // 到达位符合规则
+                    if (chineseChess.isCorrect(select_point, tx, ty)) {
+                        // 建立棋谱步骤
+                        Step stp = new Step();
+                        stp.from = new Point(select_point);
+                        stp.to = new Point(tx, ty);
+                        stp.before = chineseChess.board_state[tx][ty];
+                        stp.after = chineseChess.board_state[select_point.x][select_point.y];
+                        stp.stepName = chineseChess.getStepName(select_point, tx, ty);
+                        msg = new Step(stp);
+                        // 更新棋盘状态
+                        updateFrom(stp, false);
+                    }
+                }
+            }
+        }
+        // 设置选中位置
+        select_point.setLocation(tx, ty);
+        if (onClickListener != null) {
+            if (msg == null) {
+                msg = new Step();
+                msg.to = new Point(select_point);
+            }
+            onClickListener.onClick(msg);
+        }
+        // 重绘画布
+        repaint();
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
     }
 
     @Override
